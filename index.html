@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Advocacia Imobiliária especializada em São Paulo. Regularização de imóveis, contratos com atendimento 100% online.">
+  <title>Carolina Surlo - Advogada Especialista em Direito Imobiliário | São Paulo</title>
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gold: #D4AF37;
+      --dark-gold: #B8941F;
+      --light-gold: #F4E8C1;
+      --charcoal: #1A1A1A;
+      --dark-charcoal: #0F0F0F;
+      --light-gray: #F8F8F8;
+      --medium-gray: #666666;
+      --white: #FFFFFF;
+      --accent-red: #8B0000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    /* Typography */
+    .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(26, 26, 26, 0);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(0px);
+    }
+
+    .nav.scrolled {
+      background: rgba(26, 26, 26, 0.95);
+      padding: 15px 5%;
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .logo {
+      font-size: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: var(--primary-gold);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 400;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background: var(--primary-gold);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .mobile-menu span {
+      width: 25px;
+      height: 2px;
+      background: var(--white);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(135deg,
+          rgba(26, 26, 26, 0.9) 0%,
+          rgba(15, 15, 15, 0.95) 50%,
+          rgba(26, 26, 26, 0.9) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="1" fill="%23D4AF37" opacity="0.05"/></pattern></defs><rect width="1920" height="1080" fill="%23000"/><rect width="1920" height="1080" fill="url(%23grain)"/></svg>');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 140px 5% 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content {
+      animation: fadeInUp 1.2s ease 0.3s backwards;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--primary-gold);
+      padding: 12px 28px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      line-height: 1.1;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+
+    .hero-content h1 span {
+      color: var(--primary-gold);
+      font-weight: 400;
+      display: block;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 50px;
+      font-weight: 300;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .hero-feature:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .hero-feature::before {
+      content: '✓';
+      color: var(--primary-gold);
+      font-size: 16px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cta-primary {
+      background: var(--primary-gold);
+      color: var(--charcoal);
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid var(--primary-gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-primary:hover::before {
+      left: 100%;
+    }
+
+    .cta-primary:hover {
+      background: transparent;
+      color: var(--primary-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .cta-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cta-secondary:hover {
+      border-color: var(--primary-gold);
+      color: var(--primary-gold);
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 50px;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      margin-top: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .trust-badge:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: rgba(212, 175, 55, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .trust-badge-icon {
+      font-size: 24px;
+      color: var(--primary-gold);
+    }
+
+    .trust-badge-text strong {
+      display: block;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 3px;
+      font-weight: 600;
+    }
+
+    .trust-badge-text span {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Problem-Solution Section */
+    .problem-solution {
+      background: var(--white);
+      padding: 120px 5%;
+      position: relative;
+    }
+
+    .problem-solution::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+    }
+
+    .problem-solution-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .problem-box {
+      background: linear-gradient(135deg, #f8f8f8, #f0f0f0);
+      padding: 60px;
+      border-radius: 12px;
+      border-left: 6px solid var(--accent-red);
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .problem-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), transparent);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .problem-box h3 {
+      font-size: 32px;
+      color: var(--accent-red);
+      margin-bottom: 30px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .problem-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .problem-list li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      padding-left: 35px;
+      position: relative;
+    }
+
+    .problem-list li::before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: var(--accent-red);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .solution-box {
+      background: linear-gradient(135deg, var(--charcoal), #2a2a2a);
+      padding: 60px;
+      color: var(--white);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .solution-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent, rgba(212, 175, 55, 0.1));
+      pointer-events: none;
+    }
+
+    .solution-box h3 {
+      font-size: 32px;
+      color: var(--primary-gold);
+      margin-bottom: 30px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .solution-list {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .solution-list li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+      padding-left: 35px;
+      position: relative;
+    }
+
+    .solution-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-gold);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* About Section */
+    .sobre {
+      background: linear-gradient(135deg, var(--light-gray), #f0f0f0);
+      padding: 120px 5%;
+      position: relative;
+    }
+
+    .sobre-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sobre-content h2 {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .sobre-content h3 {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      color: var(--charcoal);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .sobre-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--medium-gray);
+      margin-bottom: 25px;
+    }
+
+    .sobre-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 30px;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--primary-gold);
+      display: block;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--medium-gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .sobre-image {
+      position: relative;
+    }
+
+    .sobre-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Services Section */
+    .servicos {
+      background: var(--charcoal);
+      padding: 120px 5%;
+      color: var(--white);
+      position: relative;
+    }
+
+    .servicos::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="%23D4AF37" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .servicos-header {
+      text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .servicos-header h2 {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .servicos-header h3 {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .servicos-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .servico-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      padding: 50px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .servico-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .servico-card:hover::before {
+      left: 100%;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary-gold);
+      box-shadow: 0 30px 80px rgba(212, 175, 55, 0.2);
+    }
+
+    .servico-icon {
+      font-size: 48px;
+      color: var(--primary-gold);
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    .servico-card h4 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .servico-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 25px;
+    }
+
+    .servico-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .servico-features li {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .servico-features li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-gold);
+    }
+
+    /* Process Section */
+    .processo {
+      background: var(--white);
+      padding: 120px 5%;
+    }
+
+    .processo-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .processo-header h2 {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .processo-header h3 {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      color: var(--charcoal);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .processo-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .processo-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+    }
+
+    .processo-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 39px;
+      top: 80px;
+      width: 2px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--primary-gold), transparent);
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+      color: var(--charcoal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .step-content h4 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--charcoal);
+      font-weight: 500;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .step-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--medium-gray);
+    }
+
+    /* Testimonials Section */
+    .depoimentos {
+      background: linear-gradient(135deg, var(--light-gray), #f0f0f0);
+      padding: 120px 5%;
+    }
+
+    .depoimentos-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .depoimentos-header h2 {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .depoimentos-header h3 {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      color: var(--charcoal);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .depoimentos-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .depoimento-card {
+      background: var(--white);
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .depoimento-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .depoimento-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 80px;
+      color: var(--primary-gold);
+      opacity: 0.3;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .depoimento-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--medium-gray);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .depoimento-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charcoal);
+      font-weight: 600;
+      font-size: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .author-info h5 {
+      font-size: 16px;
+      color: var(--charcoal);
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+        .author-info span {
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+
+        .depoimento-source {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .depoimento-source img {
+            height: 18px; /* Tamanho da logo do Google */
+            width: auto;
+        }
+
+        .depoimento-source a {
+            font-size: 13px;
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .depoimento-source a:hover {
+            color: var(--primary-gold);
+        }
+
+        .depoimento-text.truncated {
+            max-height: 100px; /* Altura máxima para o texto truncado */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .depoimento-text.truncated::after {
+            content: ". . .";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(to right, transparent, var(--white) 50%);
+            padding-left: 20px;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--primary-gold);
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            text-align: left;
+            padding: 0;
+            font-weight: 500;
+        }
+
+        .read-more-btn:hover {
+            text-decoration: underline;
+        }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--charcoal), #2a2a2a);
+      padding: 100px 5%;
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1), transparent 70%);
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-content h2 {
+      font-size: 48px;
+      font-weight: 300;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .cta-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 40px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-charcoal);
+      padding: 80px 5% 40px;
+      color: var(--white);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-section h4 {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: var(--primary-gold);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        backdrop-filter: blur(20px);
+      }
+
+      .nav-links.active {
+        right: 0;
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+        z-index: 1001;
+      }
+
+      .mobile-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      .hero-container {
+        padding: 80px 5% 60px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .hero-features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 50px;
+      }
+
+      .hero-feature {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .cta-primary,
+      .cta-secondary {
+        width: auto;
+        min-width: 200px;
+        max-width: 250px;
+        justify-content: center;
+        padding: 14px 28px;
+        font-size: 12px;
+      }
+
+      .trust-badge {
+        margin-top: 30px;
+        padding: 15px 25px;
+      }
+
+      .trust-badge-icon {
+        font-size: 20px;
+      }
+
+      .trust-badge-text strong {
+        font-size: 14px;
+      }
+
+      .problem-solution-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .sobre-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .sobre-image {
+        order: -1;
+      }
+
+      .sobre-content {
+        order: 1;
+      }
+
+      .problem-box,
+      .solution-box {
+        padding: 40px;
+      }
+
+      .servicos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .servico-card {
+        padding: 40px;
+      }
+
+      .processo-step {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+      }
+
+      .processo-step:not(:last-child)::after {
+        left: 29px;
+        top: 70px;
+        height: 40px;
+      }
+
+      .depoimentos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .depoimento-card {
+        padding: 30px;
+      }
+
+      .depoimento-card::before {
+        top: 10px;
+        left: 20px;
+        font-size: 60px;
+      }
+
+      .sobre-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content h2 {
+        font-size: 36px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 80px 5% 50px;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .problem-box,
+      .solution-box,
+      .servico-card {
+        padding: 25px;
+      }
+
+      .depoimento-card {
+        padding: 25px;
+      }
+
+      .depoimento-card::before {
+        top: 5px;
+        left: 15px;
+        font-size: 50px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .cta-content h2 {
+        font-size: 28px;
+      }
+
+      .cta-primary,
+      .cta-secondary {
+        min-width: 180px;
+        max-width: 220px;
+        padding: 12px 24px;
+        font-size: 11px;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+      }
+
+      .processo-step {
+        grid-template-columns: 50px 1fr;
+        gap: 15px;
+      }
+
+      .processo-step:not(:last-child)::after {
+        left: 24px;
+        top: 60px;
+        height: 35px;
+      }
+    }
+
+    /* Scroll animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Selection styling */
+    ::selection {
+      background: var(--primary-gold);
+      color: var(--charcoal);
+    }
+
+    ::-moz-selection {
+      background: var(--primary-gold);
+      color: var(--charcoal);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="logo">Carolina Surlo</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Processo</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="mobile-menu" id="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-container">
+      <div class="hero-content animate-on-scroll">
+        <div class="hero-badge">Advocacia Especializada</div>
+        <h1 class="serif">
+          Proteção Jurídica <span>Imobiliária Completa</span>
+        </h1>
+        <p class="hero-subtitle">
+          Especialista em Direito Imobiliário com mais de 10 anos de experiência, oferecendo soluções jurídicas personalizadas para proteger seu patrimônio e garantir segurança em todas as suas transações imobiliárias.
+        </p>
+        <div class="hero-features">
+          <div class="hero-feature">Atendimento 100% online e personalizado</div>
+          <div class="hero-feature">Regularização completa de imóveis</div>
+          <div class="hero-feature">Contratos seguros</div>
+          <div class="hero-feature">Consultoria preventiva especializada</div>
+        </div>
+        <div class="hero-cta-group">
+          <a href="#contato" class="cta-primary">
+            Consulta 
+            <span>→</span>
+          </a>
+          <a href="#servicos" class="cta-secondary">
+            Nossos Serviços
+            <span>↓</span>
+          </a>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">⚖️</div>
+          <div class="trust-badge-text">
+            <strong>OAB/SP</strong>
+            <span>Registro Ativo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem-Solution Section -->
+  <section class="problem-solution">
+    <div class="problem-solution-container">
+      <div class="problem-box animate-on-scroll">
+        <h3 class="serif">Problemas Imobiliários Complexos</h3>
+        <ul class="problem-list">
+          <li>Documentação irregular ou incompleta do imóvel</li>
+          <li>Contratos mal elaborados que geram insegurança jurídica</li>
+          <li>Disputas entre proprietários, inquilinos ou vizinhos</li>
+          <li>Processos de usucapião e regularização fundiária</li>
+          <li>Questões de herança e partilha de bens imóveis</li>
+          <li>Problemas com financiamento e garantias</li>
+        </ul>
+        <p><strong>Sem orientação jurídica especializada, você pode perder tempo, dinheiro e até mesmo seu patrimônio.</strong></p>
+      </div>
+      <div class="solution-box animate-on-scroll">
+        <h3 class="serif">Soluções Jurídicas Especializadas</h3>
+        <ul class="solution-list">
+          <li>Análise completa da documentação imobiliária</li>
+          <li>Elaboração de contratos blindados juridicamente</li>
+          <li>Mediação e resolução de conflitos imobiliários</li>
+          <li>Regularização de imóveis e documentação</li>
+          <li>Assessoria em inventários e partilhas</li>
+          <li>Consultoria preventiva para evitar problemas futuros</li>
+        </ul>
+        <p><strong>Com nossa expertise, você tem a segurança jurídica necessária para proteger seu patrimônio e realizar negócios com tranquilidade.</strong></p>
+        <a href="#contato" class="cta-primary" style="margin-top: 20px;">
+          Solicitar Consultoria
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-container">
+      <div class="sobre-content animate-on-scroll">
+        <h2>Sobre a Advogada</h2>
+        <h3 class="serif">Carolina Surlo</h3>
+        <p>
+          Advogada especialista em Direito Imobiliário com mais de 10 anos de experiência no mercado jurídico. Formada pela Universidade Federal de Mato Grosso do Sul (UFMS) com pós-graduação em Direito Imobiliário.
+        </p>
+        <p>
+          Atuo exclusivamente na área imobiliária, oferecendo soluções jurídicas personalizadas para pessoas físicas e jurídicas. Minha missão é proporcionar segurança jurídica completa em todas as transações e questões relacionadas ao seu patrimônio imobiliário.
+        </p>
+        <p>
+          Com atendimento 100% online, ofereço consultoria especializada para clientes em todo o Brasil, sempre com foco na prevenção de problemas e na proteção patrimonial.
+        </p>
+        <div class="sobre-stats">
+          <div class="stat-item">
+            <span class="stat-number serif">500+</span>
+            <span class="stat-label">Casos Resolvidos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number serif">10+</span>
+            <span class="stat-label">Anos de Experiência</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number serif">98%</span>
+            <span class="stat-label">Taxa de Sucesso</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number serif">24h</span>
+            <span class="stat-label">Tempo de Resposta</span>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-image animate-on-scroll">
+        <img src="./advogada.jpg" alt="Carolina Surlo - Advogada Especialista">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="servicos" id="servicos">
+    <div class="servicos-header animate-on-scroll">
+      <h2>Nossos Serviços</h2>
+      <h3 class="serif">Soluções Jurídicas Especializadas</h3>
+      <p>Oferecemos um portfólio completo de serviços jurídicos imobiliários, sempre com foco na prevenção e proteção do seu patrimônio.</p>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">🏠</span>
+        <h4 class="serif">Regularização de Imóveis</h4>
+        <p>Análise completa da documentação, correção de irregularidades e regularização junto aos órgãos competentes.</p>
+        <ul class="servico-features">
+          <li>Análise de documentação</li>
+          <li>Correção de irregularidades</li>
+          <li>Averbações e registros</li>
+          <li>Certidões e alvarás</li>
+        </ul>
+      </div>
+      <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">📋</span>
+        <h4 class="serif">Contratos Imobiliários</h4>
+        <p>Elaboração e revisão de contratos de compra, venda, locação e outros negócios imobiliários com segurança jurídica total.</p>
+        <ul class="servico-features">
+          <li>Contratos de compra e venda</li>
+          <li>Contratos de locação</li>
+          <li>Promessas de compra e venda</li>
+          <li>Revisão de contratos</li>
+        </ul>
+      </div>
+      <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">⚖️</span>
+        <h4 class="serif">Consultoria Jurídica</h4>
+        <p>Orientação especializada para prevenir problemas e tomar decisões seguras em questões imobiliárias complexas.</p>
+        <ul class="servico-features">
+          <li>Consultoria preventiva</li>
+          <li>Análise de riscos</li>
+          <li>Orientação estratégica</li>
+          <li>Pareceres jurídicos</li>
+        </ul>
+      </div>
+      <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">🏛️</span>
+        <h4 class="serif">Usucapião</h4>
+        <p>Assessoria completa em processos de usucapião para regularização da posse e aquisição da propriedade.</p>
+        <ul class="servico-features">
+          <li>Análise de viabilidade</li>
+          <li>Documentação necessária</li>
+          <li>Processo judicial</li>
+          <li>Registro da propriedade</li>
+        </ul>
+      </div>
+      <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">👥</span>
+        <h4 class="serif">Inventário e Partilha</h4>
+        <p>Assessoria em inventários e partilha de bens imóveis, garantindo distribuição justa e legal do patrimônio.</p>
+        <ul class="servico-features">
+          <li>Inventário judicial</li>
+          <li>Inventário extrajudicial</li>
+          <li>Partilha de bens</li>
+          <li>Planejamento sucessório</li>
+        </ul>
+      </div>
+      <!-- <div class="servico-card animate-on-scroll">
+        <span class="servico-icon">🛡️</span>
+        <h4 class="serif">Proteção Patrimonial</h4>
+        <p>Estratégias jurídicas para proteger seu patrimônio imobiliário contra riscos e contingências futuras.</p>
+        <ul class="servico-features">
+          <li>Blindagem patrimonial</li>
+          <li>Estruturação jurídica</li>
+          <li>Planejamento tributário</li>
+          <li>Gestão de riscos</li>
+        </ul>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="processo" id="processo">
+    <div class="processo-header animate-on-scroll">
+      <h2>Como Funciona</h2>
+      <h3 class="serif">Nosso Processo de Atendimento</h3>
+      <p>Um processo simples e eficiente para resolver suas questões imobiliárias com total segurança jurídica.</p>
+    </div>
+    <div class="processo-container">
+      <div class="processo-step animate-on-scroll">
+        <div class="step-number serif">1</div>
+        <div class="step-content">
+          <h4 class="serif">Consulta Inicial</h4>
+          <p>Agendamos uma conversa para entender sua situação, analisar a documentação inicial e identificar as melhores soluções para seu caso específico.</p>
+        </div>
+      </div>
+      <div class="processo-step animate-on-scroll">
+        <div class="step-number serif">2</div>
+        <div class="step-content">
+          <h4 class="serif">Análise Detalhada</h4>
+          <p>Realizamos uma análise completa de toda a documentação, identificamos possíveis riscos e elaboramos um plano de ação personalizado.</p>
+        </div>
+      </div>
+      <div class="processo-step animate-on-scroll">
+        <div class="step-number serif">3</div>
+        <div class="step-content">
+          <h4 class="serif">Proposta Personalizada</h4>
+          <p>Apresentamos uma proposta detalhada com prazos, custos e estratégias específicas para resolver sua questão imobiliária.</p>
+        </div>
+      </div>
+      <div class="processo-step animate-on-scroll">
+        <div class="step-number serif">4</div>
+        <div class="step-content">
+          <h4 class="serif">Execução e Acompanhamento</h4>
+          <p>Executamos todas as ações necessárias com acompanhamento constante, mantendo você informado sobre cada etapa do processo.</p>
+        </div>
+      </div>
+      <div class="processo-step animate-on-scroll">
+        <div class="step-number serif">5</div>
+        <div class="step-content">
+          <h4 class="serif">Finalização e Entrega</h4>
+          <p>Concluímos o trabalho com a entrega de toda a documentação regularizada e orientações para manutenção da segurança jurídica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="depoimentos-header animate-on-scroll">
+      <h2>Depoimentos</h2>
+      <h3 class="serif">O Que Nossos Clientes Dizem</h3>
+      <p>A satisfação dos nossos clientes é nossa maior conquista. Veja alguns depoimentos de quem confiou em nosso trabalho.</p>
+    </div>
+    <div class="depoimentos-grid">
+      <div class="depoimento-card animate-on-scroll">
+        <div class="depoimento-text-wrapper">
+          <p class="depoimento-text">
+            "Desde o primeiro contato, a Dr.ª Carolina Surlo Gama tivemos certeza que escolhemos a profissional precisa, pois demonstrou um profundo conhecimento das leis e procedimentos, aliando isso a uma notável capacidade de comunicação. Ela foi capaz de explicar questões complexas de forma clara e acessível, o que é fundamental para qualquer cliente que busca compreender seus direitos e as nuances de seu caso.
+            Quero dar ênfase ao seu olhar humanizado, deixo nossos agradecimentos!"
+          </p>
+          <button class="read-more-btn" style="display: none;">Leia Mais</button>
+        </div>
+        <div class="depoimento-author">
+          <div class="author-avatar">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUuFOELF5HX4cG8-wsl3-dZVEh--KdcvnevPyfeWHoLe6H3KYJi5w=w90-h90-p-rp-mo-br100" alt="Fernanda Barroso Marim">
+          </div>
+          <div class="author-info">
+            <h5>Fernanda Barroso Marim</h5>
+            <div class="depoimento-source">
+              <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+              <a href="https://share.google/FWB0Vu3828nTK183z" target="_blank">Ver no Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card animate-on-scroll">
+        <div class="depoimento-text-wrapper">
+          <p class="depoimento-text">
+            "Doutora Carolina, quero agradecer pelo excelente trabalho que você fez no inventário! Sua dedicação, prontidão, ética
+            competência e atenção aos detalhes foram fundamentais para que tudo fosse resolvido de forma tranquila e eficiente. Você foi uma verdadeira parceira em um momento tão delicado para nós.
+            Muito obrigado por tudo! Seu trabalho foi incrível!"
+          </p>
+          <button class="read-more-btn" style="display: none;">Leia Mais</button>
+        </div>
+        <div class="depoimento-author">
+          <div class="author-avatar">
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocJsiMt1GiVNZ42bEthXExrGrl6IkRHBsfZRIe_cOCJ7pvnUxw=w90-h90-p-rp-mo-br100" alt="Peterson Marim">
+          </div>
+          <div class="author-info">
+            <h5>Peterson Marim</h5>
+            <div class="depoimento-source">
+              <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+              <a href="https://share.google/Fj38r2bQghAKtEQ0e" target="_blank">Ver no Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card animate-on-scroll">
+        <div class="depoimento-text-wrapper">
+          <p class="depoimento-text">
+            "Doutora Carol é muito competente! Tínhamos um problema com regularização de um imóvel que já durava anos e envolvia muitas pessoas, mas foi com a ajuda dela que conseguimos finalmente resolver, graças a Deus. Ela é muito atenciosa e o preço é justo. Eu e minha família a recomendamos para todos que conhecemos"
+          </p>
+          <button class="read-more-btn" style="display: none;">Leia Mais</button>
+        </div>
+        <div class="depoimento-author">
+          <div class="author-avatar">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYWVtovkMV8_-oOtzWlkIjlv0mqWX-WCcK57PNEvIPbaTt_8dl=w90-h90-p-rp-mo-ba4-br100" alt="Asaph J">
+          </div>
+          <div class="author-info">
+            <h5>Asaph J</h5>
+            <div class="depoimento-source">
+              <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+              <a href="https://share.google/twuJ8aWFnjHta7LyN" target="_blank">Ver no Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contato">
+    <div class="cta-content animate-on-scroll">
+      <h2 class="serif">Proteja Seu Patrimônio Hoje Mesmo</h2>
+      <p>
+        Não deixe questões imobiliárias se tornarem problemas maiores. Agende sua consulta e descubra como podemos proteger seu patrimônio com segurança jurídica total.
+      </p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/5518996845537?text=Olá! Gostaria de agendar uma consulta sobre questões imobiliárias." class="cta-primary">
+          Consulta via WhatsApp
+          <span>📱</span>
+        </a>
+        <!-- <a href="mailto:contato@carolinasurlo.com.br" class="cta-secondary">
+          Enviar E-mail
+          <span>✉️</span>
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 class="serif">Carolina Surlo</h4>
+        <p>Advocacia Imobiliária Especializada</p>
+        <p>OAB/SP 300.759</p>
+        <p>Atendimento 100% online</p>
+      </div>
+      <div class="footer-section">
+        <h4 class="serif">Contato</h4>
+        <p>📱 (19) 99684-5537</p>
+        <!-- <p>✉️ contato@carolinasurlo.com.br</p> -->
+        <p>🌐 www.carolinasurlo.com.br</p>
+      </div>
+      <div class="footer-section">
+        <h4 class="serif">Serviços</h4>
+        <p><a href="#servicos">Regularização de Imóveis</a></p>
+        <p><a href="#servicos">Contratos Imobiliários</a></p>
+        <p><a href="#servicos">Consultoria Jurídica</a></p>
+        <p><a href="#servicos">Usucapião</a></p>
+      </div>
+      <div class="footer-section">
+        <h4 class="serif">Áreas de Atuação</h4>
+        <p>São Paulo - SP</p>
+        <p>Atendimento Online</p>
+        <p>Todo o Brasil</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Carolina Surlo - Advocacia Imobiliária. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenu.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    navLinks.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        mobileMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '1';
+    });
+
+    // Parallax effect for hero background
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    });
+
+    // Add hover effects to cards
+    document.querySelectorAll('.servico-card, .depoimento-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+      });
+
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // Add typing effect to hero title
+    function typeWriter(element, text, speed = 100) {
+      let i = 0;
+      element.innerHTML = '';
+
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+
+      type();
+    }
+
+    // Initialize typing effect when page loads
+    window.addEventListener('load', function() {
+      const heroTitle = document.querySelector('.hero-content h1');
+      if (heroTitle) {
+        const originalText = heroTitle.textContent;
+        setTimeout(() => {
+          typeWriter(heroTitle, originalText, 50);
+        }, 1000);
+      }
+    });
+
+    // Add floating animation to trust badge
+    const trustBadge = document.querySelector('.trust-badge');
+    if (trustBadge) {
+      setInterval(() => {
+        trustBadge.style.transform = 'translateY(-5px)';
+        setTimeout(() => {
+          trustBadge.style.transform = 'translateY(0)';
+        }, 1000);
+      }, 3000);
+    }
+
+    // Add counter animation to stats
+    function animateCounter(element, target, duration = 2000) {
+      let start = 0;
+      const increment = target / (duration / 16);
+
+      function updateCounter() {
+        start += increment;
+        if (start < target) {
+          element.textContent = Math.floor(start) + (element.textContent.includes('+') ? '+' : '') + (element.textContent.includes('%') ? '%' : '');
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target + (element.textContent.includes('+') ? '+' : '') + (element.textContent.includes('%') ? '%' : '');
+        }
+      }
+
+      updateCounter();
+    }
+
+    // Initialize counter animations when stats come into view
+    const statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumber = entry.target.querySelector('.stat-number');
+          if (statNumber && !statNumber.classList.contains('animated')) {
+            statNumber.classList.add('animated');
+            const text = statNumber.textContent;
+            const number = parseInt(text.replace(/\D/g, ''));
+            animateCounter(statNumber, number);
+          }
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    document.querySelectorAll('.stat-item').forEach(stat => {
+      statsObserver.observe(stat);
+    });
+
+    // Funcionalidade 'Leia Mais' para depoimentos
+    document.addEventListener('DOMContentLoaded', function() {
+      const MAX_CHARS = 200; // Número máximo de caracteres antes de truncar
+      
+      document.querySelectorAll('.depoimento-text-wrapper').forEach(wrapper => {
+        const textElement = wrapper.querySelector('.depoimento-text');
+        const readMoreBtn = wrapper.querySelector('.read-more-btn');
+        const fullText = textElement.textContent.trim();
+        
+        // Se o texto for maior que MAX_CHARS, truncar e mostrar botão
+        if (fullText.length > MAX_CHARS) {
+          const truncatedText = fullText.substring(0, MAX_CHARS) + '...';
+          textElement.textContent = truncatedText;
+          textElement.dataset.fullText = fullText;
+          textElement.dataset.truncatedText = truncatedText;
+          textElement.dataset.expanded = 'false';
+          readMoreBtn.style.display = 'block';
+          
+          // Adicionar evento de clique no botão
+          readMoreBtn.addEventListener('click', function() {
+            if (textElement.dataset.expanded === 'false') {
+              textElement.textContent = textElement.dataset.fullText;
+              readMoreBtn.textContent = 'Leia Menos';
+              textElement.dataset.expanded = 'true';
+            } else {
+              textElement.textContent = textElement.dataset.truncatedText;
+              readMoreBtn.textContent = 'Leia Mais';
+              textElement.dataset.expanded = 'false';
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
